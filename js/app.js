@@ -4,27 +4,51 @@
 
 /*---------------------------- Variables (state) ----------------------------*/
 let board;
-let turn = 'X';
-let winner = null;
+let yourTurn = 'X';
+let winner = false;
 let tie = false;
 
 
 /*------------------------ Cached Element References ------------------------*/
 const squareEls = document.querySelectorAll('.sqr')
 const messageEl = document.querySelector('#message')
-
+const restartBtn = document.querySelector('#restar')
 /*-------------------------------- Functions --------------------------------*/
 function init(){
-    board = [null,null,null,null,null,null,null,null,null];
+    board = ['','','','','','','','',''];
     turn = 'X'
-    winner = null;
+    winner = false;
     tie = false;
+
+    function render(){
+
+    }
     squareEls.forEach(square => {
         square.textContent = '';
 
     });
     messageEl.textContent = `${turn}'s turn`;
 }
+
+
+function updateBoard() {
+    // dont understand
+}
+
+
+function updateMsg(){
+    if (winner === false && tie === false){
+        // render whose turn it is here
+    } if (winner === false && tie === true){
+        //render a tie message here
+    } else{
+        //render a congratulations message to player that won
+    }
+}
+
+
+
+
 
 
 

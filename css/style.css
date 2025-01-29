@@ -1,14 +1,27 @@
 body {
     background-color: gainsboro;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     /* Use a system font, if none are available use an available sans-sarif */
     font-family: system-ui, sans-serif;
     margin: 0;
+    height: 1000px;
+    flex-direction: column;
+  }
+
+  h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .board {
     display: flex;
     flex-wrap: wrap;
     width: 325px;
+    align-items: center;
+    justify-content: center;
   }
   
   .sqr {
